@@ -1,0 +1,23 @@
+<section class="section work js-anchor-target" id="works">
+	<div class="l">
+		<div class="section__in">
+			<!-- begin section title -->
+			<h2 class="section__title">Recent works</h2>
+			<!-- end section title -->
+
+			<!-- begin work gallery -->
+			<div class="work__gallery">
+				<ul class="gallery">
+					{% for p in projects %}
+					<li class="gallery__item">
+						<div class="gallery__picture" style="background-image: url({{ p.poster }});">
+							<a href="{{ p.link }}" class="button button_gray">View project</a>
+						</div>
+					</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<!-- end work gallery -->
+		</div>
+	</div>
+</section>

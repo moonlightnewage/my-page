@@ -1,0 +1,21 @@
+<section class="section advantages js-anchor-target" id="advantages">
+	<div class="l">
+		<div class="section__in">
+			<!-- begin section title -->
+			<h2 class="section__title">Advantages</h2>
+			<!-- end section title -->
+
+			<!-- begin advantages blocks -->
+			<ul class="advantages__blocks">
+				{% for a in advantages %}
+				<li class="block">
+					<i class="block__icon">{{ mixins.icon(a.icon) }}</i>
+					<h3 class="block__title">{{ a.title }}</h3>
+					<div class="block__text">{{ a.text | safe }}</div>
+				</li>
+				{% endfor %}
+			</ul>
+			<!-- end advantages blocks -->
+		</div>
+	</div>
+</section>

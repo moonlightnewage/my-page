@@ -1,0 +1,21 @@
+<footer class="footer">
+	<div class="footer__in">
+		<div class="l">
+			<!-- begin footer copyright -->
+			<div class="footer__copyright">
+				<p>All rights reserved &copy; 2017</p>
+			</div>
+			<!-- end footer copyright -->
+
+			<!-- begin footer socials -->
+			<ul class="footer__socials">
+				{% for s in socials %}
+				<li class="footer__social">
+					<a href="{{ s.link }}">{{ mixins.icon(s.icon) }}</a>
+				</li>
+				{% endfor %}
+			</ul>
+			<!-- end footer socials -->
+		</div>
+	</div>
+</footer>

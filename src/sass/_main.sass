@@ -1,0 +1,202 @@
+.header
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .1)
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	z-index: 100
+	background-color: #fff
+	&__in
+		+vertical
+		height: 80px
+	&__nav
+		display: inline-block
+		vertical-align: middle
+		&-item
+			display: inline-block
+			vertical-align: middle
+			padding: 6px
+			margin-right: 15px
+		&-link
+			color: #333
+			opacity: .5
+			text-decoration: none
+			text-transform: uppercase
+			font-size: 16px
+			+trans(opacity)
+			&:hover, &.is-active
+				opacity: 1
+.footer
+	+image('footer-image.jpg')
+	height: 300px
+	background-position: 50% 100%
+	background-repeat: no-repeat
+	background-size: contain
+	position: relative
+	.l
+		+clr
+	&__in
+		border-top: 1px solid rgba(#fff, .5)
+		padding: 15px 0
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		color: #fff
+	&__copyright
+		float: left
+		line-height: 48px
+		p
+			white-space: nowrap
+	&__socials
+		float: right
+	&__social
+		float: left
+		margin-left: 15px
+		a
+			display: block
+			border: 1px solid #fff
+			width: 50px
+			height: 48px
+			position: relative
+			+trans
+			&:hover
+				background-color: #fff
+				.icon
+					fill: #333
+					border-color: #333
+		.icon
+			+vcenter
+			width: 1.4em
+			height: 1.5em
+			fill: #fff
+.section
+	padding: 47px 0
+	&__title
+		font-size: 30px
+		display: inline-block
+		position: relative
+		padding-top: 50px
+		margin-bottom: 90px
+		text-transform: uppercase
+		&:before
+			content: ""
+			width: 2px
+			height: 50px
+			background-color: #333
+			display: block
+			position: absolute
+			top: 0
+			left: 50%
+			transform: translateX(-50%)
+	&__in
+		+clr
+		text-align: center
+	&__text
+		line-height: 1.8
+		p
+			margin-bottom: 10px
+			
+
+.hero
+	margin-bottom: 47px
+	padding-top: 80px
+	height: calc(100vh - 80px)
+	width: 100%
+	+cover
+	.l
+		+vertical
+		height: 100%
+	&__in
+		display: inline-block
+		vertical-align: middle
+	&__title
+		+lato-semibold
+		color: #fff
+		font-size: 60px
+		margin-bottom: 10px
+	&__text
+		color: #fff
+		margin-bottom: 50px
+		font-size: 16px
+	&__button
+		display: inline-block
+		.button
+			width: 200px
+.about
+	&__in
+		text-align: left
+	&__title
+		margin-bottom: 35px
+	&__picture
+		width: percentage(400/1110)
+		float: left
+
+		img
+			width: 100%
+	&__text
+		overflow: hidden
+		padding-left: 60px
+.advantages
+	&__blocks
+		display: flex
+		justify-content: space-between
+		.block
+			width: percentage(255/1110)
+.gallery
+	display: flex
+	flex-wrap: wrap
+	&__item
+		width: percentage(350/1110)
+		margin-right: percentage(30/1110)
+		margin-bottom: 30px
+		padding-top: 30%
+		position: relative
+		height: 0
+		&:nth-of-type(3n)
+			margin-right: 0
+		&:hover
+			.gallery__picture:before
+				opacity: 1
+			.button
+				opacity: 1
+		.button
+			width: 70%
+			+vcenter
+			z-index: 3
+			opacity: 0
+
+	&__picture
+		+coverdiv
+		+cover
+		&:before
+			content: ""
+			display: block
+			+coverdiv
+			background-color: rgba(#000, .5)
+			opacity: .3
+			z-index: 2
+			+trans(opacity, .3s)
+
+.contact
+	&__title
+		margin-bottom: 0
+		padding-left: 10px
+		padding-right: 10px
+		background-color: #fff
+		z-index: 2
+		&:before
+			display: none
+	&__form
+		border: 1px solid #8e8e8e
+		position: relative
+		top: -21px
+		padding: 56px 20px
+		max-width: 900px
+		margin: 0 auto
+		&-in
+			max-width: 730px
+			margin: 0 auto
+		.button
+			width: 200px
+			margin: 0 auto

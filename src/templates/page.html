@@ -1,0 +1,86 @@
+---
+title: Portfolio
+advantages: [
+	{
+		icon: 'pencil',
+		title: 'Clean code',
+		text: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, molestiae.</p>'
+	},
+	{
+		icon: 'tablet',
+		title: 'Responsive pages',
+		text: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, molestiae.</p>'
+	},
+	{
+		icon: 'settings',
+		title: 'User-friendly interface',
+		text: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, molestiae.</p>'
+	},
+	{
+		icon: 'calendar',
+		title: 'Meeting deadlines',
+		text: '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, molestiae.</p>
+		<p>Lorem ipsum dolor sit amet.</p>'
+	}
+]
+projects: [
+	{
+		poster: 'https://placeimg.com/350/380/nature',
+		link: 'test'
+	},
+	{
+		poster: 'https://placeimg.com/350/380/nature',
+		link: ''
+	},
+	{
+		poster: 'https://placeimg.com/350/380/nature',
+		link: ''
+	},
+	{
+		poster: 'https://placeimg.com/350/380/nature',
+		link: ''
+	},
+	{
+		poster: 'https://placeimg.com/350/380/nature',
+		link: ''
+	}
+
+]
+
+socials: [
+	{
+		icon: 'facebook',
+		link: 'facebook'
+	},
+	{
+		icon: 'linkedin',
+		link: 'linkedin'
+	},
+	{
+		icon: 'pinterest',
+		link: 'pinterest'
+	},
+	{
+		icon: 'skype',
+		link: 'skype'
+	}
+
+]
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+	{% include "partials/_header.html" %}
+	{% include "partials/_hero.html" %}
+
+	<main>
+		{% include "partials/_about.html" %}
+		{% include "partials/_advantages.html" %}
+		{% include "partials/_portfolio.html" %}
+		{% include "partials/_contact.html" %}
+	</main>
+
+	{% include "partials/_footer.html" %}
+
+{% endblock %}
